@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Conference 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Tech Conference 2026</h1>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- bagian hero -->
+    <section id="hero" class="hero">
+        <h2>Welcome to Tech Conference 2026</h2>
+        <p>Acara teknologi terbesar untuk developer, designer, dan inovator.</p>
+        <a href="#register" class="btn-hero">Daftar Sekarang!</a>
+    </section>
+
+    <!-- info acara nih -->
+    <section id="about" class="about">
+        <h2>Tentang Acara</h2>
+        <img src="png.jpeg" alt="foto saya" class="profile-photo">
+        <p>
+            Tech Conference 2026 adalah konferensi tahunan yang menghadirkan 
+            pembicara inspiratif, workshop, dan networking di bidang teknologi.
+        </p>
+    </section>
+
+    <!-- form buat daftar -->
+    <section id="register" class="register">
+        <h2>Form Pendaftaran</h2>
+        <form onsubmit="return submitDuluYa()">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" required placeholder="Ketik nama kamu...">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" required placeholder="Contoh: aku@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="kategori">Kategori Peserta</label>
+                <select id="kategori" required>
+                    <option value="">-- Pilih Dulu --</option>
+                    <option value="mahasiswa">Mahasiswa</option>
+                    <option value="profesional">Profesional</option>
+                    <option value="umum">Umum</option>
+                </select>
+            </div>
+
+            <button type="submit" id="tombol-submit">Daftar Sekarang</button>
+        </form>
+    </section>
+</main>
+
+<!-- bagian bawah / footer -->
+<footer>
+    <p>&copy; 2026 Tech Conference. Dibuat buat tugas UTS hehe.</p>
+</footer>
+
+<script>
+// fungsi ini dipanggil pas tombol submit diklik
+function submitDuluYa() {
+    console.log("Form lagi disubmit...");
+    
+    // tampilin popup sukses
+    alert("Alhamdulillah! Pendaftaran berhasil dikirim. Cek email kamu ya!");
+    
+    // return false biar pagenya ga refresh
+    return false;
+}
+</script>
+
+</body>
+</html>
